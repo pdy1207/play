@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow: hidden;
+  background: #ecf0f3;
+  height: 100vh;
+}
+
+div {
+  font-family: "Dancing Script", cursive;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #000;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+span {
+  width: 50px;
+  height: 50%;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  background: #ed45f3;
+  transform: translate(-50%, -50%);
+  animation: animate 4s infinite linear;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -1000%);
+    opacity: 0;
+    filter: hue-rotate(70deg);
+  }
+}
